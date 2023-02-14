@@ -1,7 +1,7 @@
 ---
 marp: true
 theme: uncover
-#class: invert
+class: invert
 ---
 
 # <!--fill--> Accessibililty Checker for Markdown :arrow_down:
@@ -12,7 +12,7 @@ theme: uncover
 
 ---
 
-# What is Markdown :question:
+# Accessbility in markdown publication
 
 ```markdown
 # My TODO List
@@ -26,24 +26,27 @@ Hello World
 <p>Hello World</p>
 ```
 
+- High Adapatbility in code repository, i.e., README.md
+- Used in many blog posts.
+- Many preview or transformer tools don't validate the accessibility.
+
 ---
-# Project Goal
-* Extend open source markdown compiler library to check the accessibility of markdown file.
-* Provide the feedback to the publisher in a compile time.
-* Share the challanges identified during development.
+# Promise & Project Goal
+* Find the accessibility issue in compile time and help people to publish the web contents with accessibility.
+  * Educate and enforce the accessibility standards.
+* Study and deliver a extensible tool that checks the accessibility of the markdown.
 
 ---
 # Proposed Approach
 - Implement the checker using [python-markdown extension API](https://python-markdown.github.io/extensions/api/).
 - The parser loads text, applies the `preprocessors`, creates and builds an ElementTree object from the `block processors` and `inline processors`, renders the ElementTree object as Unicode text, and then then applies the `postprocessors`.
-
+- Plan to extend the library to check the various accessibility of the contents in the markdown document.
 ---
-# Project Plan
-- Feasibility Study - Be familiar with langage and library.
-- Scope down the cases to demonstrate the feature.
-  - Goal: 2 easy, 1 medium, and 1 hard
-- Implementation.
-- Document the development process and publish as a website.
+# Project Plan(timeline)
+- Week 1. Feasibility Study - Be familiar with langage and library.
+- Week 2. Scope down the cases to demonstrate the feature.
+- Week 3. Implementation.
+- Week 4. Document the development process and publish as a website.
 
 ---
 # Deliverables
