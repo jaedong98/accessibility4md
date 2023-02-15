@@ -1,5 +1,5 @@
 ---
-marp: true
+marp: false
 theme: uncover
 class: invert
 ---
@@ -31,9 +31,12 @@ Hello World
 - Many preview or transformer tools don't validate the accessibility.
 
 ---
-# Promise & Project Goal
+# Promise, Principles & Project Goal
 * Find the accessibility issue in compile time and help people to publish the web contents with accessibility.
   * Educate and enforce the accessibility standards.
+* Priciples of Disability Justice
+  * Recognizing Wholeness
+  * Leadership of those most impacted
 * Study and deliver a extensible tool that checks the accessibility of the markdown.
 
 ---
