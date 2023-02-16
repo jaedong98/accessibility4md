@@ -2,6 +2,7 @@
 - [Tutorial 1 Writie Extensions for Python Markdown](https://github.com/Python-Markdown/markdown/wiki/Tutorial-1---Writing-Extensions-for-Python-Markdown)
 - [Extention Implementation](https://github.com/TankerHQ/python-markdown/blob/master/docs/extensions/api.md)
 - [How to meet WCAG21](https://www.w3.org/WAI/WCAG21/quickref/?showtechniques=145%2C244#consistent-navigation)
+- [Extention APIs](https://github.com/Python-Markdown/markdown/blob/master/docs/extensions/api.md)
 
 # Setup Dev
 ## virtualenv
