@@ -18,13 +18,25 @@ python -m virtualenv venv
 ```
 
 To activate:
+On Windows
 ```powershell
 .\venv\Scripts\activate.bat
 ```
 
+On Mac
+```bash
+source venv/bin/activate
+```
+
 to deactivate:
+On Windows
 ```powershell
 .\venv\Scripts\deactivate.bat
+```
+
+On Mac
+```bash
+deactivate
 ```
 
 ## Install packages
