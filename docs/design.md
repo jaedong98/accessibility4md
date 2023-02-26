@@ -20,4 +20,13 @@
     - Extends the prototyped extension module to catch more accessibility issue.
     - Improved feedback loop (enhance logging or highlight the error in html.)
     - Integrate with existing markdown preview pluging - AccessibilityChecker Preview.
-  
+
+## Some extensible ideas
+- The checker to support extended markdown syntax that allow auther to insert **[ARIA](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA)** attributees, role and property. For example, we can add each `role="list"` in the list element to produce the html ([example](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/list_role)).
+  ```html
+  <div role="list">
+    <div role="listitem">List item 1</div>
+    <div role="listitem">List item 2</div>
+    <div role="listitem">List item 3</div>
+  </div>
+  ```

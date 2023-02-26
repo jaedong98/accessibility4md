@@ -18,9 +18,12 @@ python -m virtualenv venv
 ```
 
 To activate:
-On Windows
+
+On Windows, open powershell (in visual studio) and run 
 ```powershell
 .\venv\Scripts\activate.bat
+-- or --
+/venv/Scripts/Activate.ps1
 ```
 
 On Mac
@@ -29,6 +32,7 @@ source venv/bin/activate
 ```
 
 to deactivate:
+
 On Windows
 ```powershell
 .\venv\Scripts\deactivate.bat
@@ -45,8 +49,17 @@ deactivate
 (venv) PS ..\accessibility4md> pip install markdown
 ```
 
+## Development flow
 
-## Install Extensions
+### Step 0. Create and activate the virtual environment.
+
+### Step 1. Implement `Extension`
+
+### Step 2. Update `setup.py` (One time for each extension)
+
+### Step 3. Implement extension and install
+
+## Install Extensions with `develop` option.
 
 ```powershell
 (venv) PS ..\accessibility4md\src\myextension> python setup.py develop
