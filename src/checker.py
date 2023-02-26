@@ -1,6 +1,8 @@
 import markdown
-from myextension import MyExtension
-print(markdown.markdown('foo --deleted-- bar', extensions=[MyExtension()]))
+from extensions.altcheckextension import AltCheckExtension
+import logging
+logging.basicConfig(level=logging.INFO)
+#print(markdown.markdown('foo --deleted-- bar', extensions=[MyExtension()]))
 
-#html = markdown.markdown("# Hello World!", extensions=[MyExtension()])
-#print(html)
+with open('src\sample.md', 'r') as f:
+    logging.debug(markdown.markdown(f.read(), extensions=[AltCheckExtension()]))

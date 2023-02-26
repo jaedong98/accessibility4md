@@ -4,4 +4,6 @@
 
 ### Header 3
 
-![](badcontrast.png)
+![](badcontrast1.png)
+![same-alt-text-nearby](badcontrast2.png)
+![same-alt-text-nearby](badcontrast3.png)
