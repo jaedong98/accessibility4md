@@ -7,7 +7,7 @@ import logging
 
 class AltMissingFinder(ElememntVisitor):
 
-    def visit_img(self, element):
+    def visit_img(self, element, *args, **kwargs):
         if element.get('alt') is None:
             logging.info("[WCAG 2.1 - 1.1.1 Non-text Content] Found an image with no alt text for %s" % element.get('src'))
             element.set('alt', 'No alt text provided')
@@ -18,7 +18,7 @@ class AltMissingFinder(ElememntVisitor):
    
 class AltNearbyVisitor(ElememntVisitor):
 
-    def visit_p(self, element):
+    def visit_p(self, element, *args, **kwargs):
         alt_texts = set()
         for child in element:
             if child.tag == 'img':

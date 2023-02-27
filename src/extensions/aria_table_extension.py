@@ -6,7 +6,7 @@ import logging
 
 class TableRoleSetter(ElememntVisitor):
 
-    def visit_table(self, element):
+    def visit_table(self, element, *args, **kwargs):
         element.set('role', 'table')
         element.set('aria-rowcount', str(len(element)))
     
@@ -16,26 +16,26 @@ class TableRowIndexer(ElememntVisitor):
     #    element.set('role', 'table')
     #    element.set('aria-rowcount', str(len(element)))
     
-    def visit_thead(self, element):
+    def visit_thead(self, element, *args, **kwargs):
         element.set('role', 'rowgroup')
         for row in element:
             self.visit(row)
     
-    def visit_tbody(self, element):
+    def visit_tbody(self, element, *args, **kwargs):
         element.set('role', 'rowgroup')
-        for i, row in enumerate(element, start=1):
-            self.visit(row)
+        for index, row in enumerate(element, start=1):
+            self.visit(row, index)
     
-    def visit_tr(self, element):
+    def visit_tr(self, element, index=None, *args, **kwargs):
         element.set('role', 'row')
-        #element.set('aria-rowindex', str(index))
+        element.set('aria-rowindex', str(index))
         for td in element:
             self.visit(td)
     
-    def visit_td(self, element):
+    def visit_td(self, element, *args, **kwargs):
         element.set('role', 'cell')
         
-    def visit_th(self, element):
+    def visit_th(self, element, *args, **kwargs):
         element.set('role', 'columnheader')
 
 

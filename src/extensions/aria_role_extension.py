@@ -8,7 +8,7 @@ SUPORTED_ROLES = set("article banner complementary contentinfo definition docume
 ROLE_PATTERN = "==(.*?)=="
 class RoleSetter(ElememntVisitor):
 
-    def visit_h1(self, element):
+    def visit_h1(self, element, *args, **kwargs):
         g = re.search(ROLE_PATTERN, element.text)
         if g:
             role = g.group(1)

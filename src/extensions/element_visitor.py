@@ -4,7 +4,7 @@ class ElememntVisitor(object):
     specific elements to customize their behavior.
     """
 
-    def visit(self, element):
+    def visit(self, element, *args, **kwargs):
         """
         Visit the specified element, calling the appropriate visit method for
         the element type.
@@ -14,15 +14,15 @@ class ElememntVisitor(object):
         """
         methodname = 'visit_' + element.tag
         method = getattr(self, methodname, self.generic_visit)
-        return method(element)
+        return method(element, *args, **kwargs)
 
-    def generic_visit(self, element):
+    def generic_visit(self, element,  *args, **kwargs):
         """
         Visit the specified element and its children, visiting child elements
         recursively.
 
         :param element: The element to visit.
         """
-        for child in element:
-            self.visit(child)
+        for index, child in enumerate(element):
+            self.visit(child, index=index)
         return
