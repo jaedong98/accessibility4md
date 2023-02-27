@@ -1,6 +1,6 @@
 from markdown.treeprocessors import Treeprocessor
 from markdown.extensions import Extension
-from element_visitor import ElementVisitor
+from extensions.element_visitor import ElementVisitor
 import re
 import logging
 
