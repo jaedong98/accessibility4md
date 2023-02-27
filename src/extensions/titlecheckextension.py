@@ -1,7 +1,7 @@
 from markdown.treeprocessors import Treeprocessor
 from markdown.extensions import Extension
 from markdown.inlinepatterns import SimpleTagPattern
-from element_visitor import ElememntVisitor
+from element_visitor import ElementVisitor
 import logging
 
 
