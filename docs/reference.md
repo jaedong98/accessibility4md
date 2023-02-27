@@ -3,7 +3,11 @@
 - [Extention Implementation](https://github.com/TankerHQ/python-markdown/blob/master/docs/extensions/api.md)
 - [How to meet WCAG21](https://www.w3.org/WAI/WCAG21/quickref/?showtechniques=145%2C244#consistent-navigation)
 - [Extention APIs](https://github.com/Python-Markdown/markdown/blob/master/docs/extensions/api.md)
-
+- [ARIA guides](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Guides)
+- [Web Accessibility Initiative - Accessible Rich Internet Applications(WAI-ARIA) Basics](https://developer.mozilla.org/en-US/docs/Learn/Accessibility/WAI-ARIA_basics)
+- [Definition of ARIA Roles](https://www.w3.org/TR/wai-aria-1.1/#role_definitions)
+- [Definition of ARIA States and Properties](https://www.w3.org/TR/wai-aria-1.1/#state_prop_def)
+  
 # Setup Dev
 ## virtualenv
 
