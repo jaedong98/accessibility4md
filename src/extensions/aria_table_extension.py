@@ -1,16 +1,16 @@
 from markdown.extensions import Extension
 from markdown.treeprocessors import Treeprocessor
 from markdown.extensions import tables
-from element_visitor import ElememntVisitor
+from element_visitor import ElementVisitor
 import logging
 
-class TableRoleSetter(ElememntVisitor):
+class TableRoleSetter(ElementVisitor):
 
     def visit_table(self, element, *args, **kwargs):
         element.set('role', 'table')
         element.set('aria-rowcount', str(len(element)))
     
-class TableRowIndexer(ElememntVisitor):
+class TableRowIndexer(ElementVisitor):
 
     #def visit_table(self, element):
     #    element.set('role', 'table')

@@ -1,12 +1,12 @@
 from markdown.treeprocessors import Treeprocessor
 from markdown.extensions import Extension
-from element_visitor import ElememntVisitor
+from element_visitor import ElementVisitor
 import re
 import logging
 
 SUPORTED_ROLES = set("article banner complementary contentinfo definition document feed figure form main navigation region search section table".split())
 ROLE_PATTERN = "==(.*?)=="
-class RoleSetter(ElememntVisitor):
+class RoleSetter(ElementVisitor):
 
     def visit_h1(self, element, *args, **kwargs):
         g = re.search(ROLE_PATTERN, element.text)

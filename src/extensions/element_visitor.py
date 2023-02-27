@@ -1,4 +1,4 @@
-class ElememntVisitor(object):
+class ElementVisitor(object):
     """
     A visitor class for ElementTree objects. Subclasses can define methods for
     specific elements to customize their behavior.

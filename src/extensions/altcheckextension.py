@@ -1,11 +1,11 @@
 from markdown.treeprocessors import Treeprocessor
 from markdown.extensions import Extension
 from markdown.inlinepatterns import SimpleTagPattern
-from element_visitor import ElememntVisitor
+from element_visitor import ElementVisitor
 import logging
 
 
-class AltMissingFinder(ElememntVisitor):
+class AltMissingFinder(ElementVisitor):
 
     def visit_img(self, element, *args, **kwargs):
         if element.get('alt') is None:
@@ -16,7 +16,7 @@ class AltMissingFinder(ElememntVisitor):
             element.set('alt', 'No alt text provided')   
 
    
-class AltNearbyVisitor(ElememntVisitor):
+class AltNearbyVisitor(ElementVisitor):
 
     def visit_p(self, element, *args, **kwargs):
         alt_texts = set()
