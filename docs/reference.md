@@ -7,6 +7,7 @@
 - [Web Accessibility Initiative - Accessible Rich Internet Applications(WAI-ARIA) Basics](https://developer.mozilla.org/en-US/docs/Learn/Accessibility/WAI-ARIA_basics)
 - [Definition of ARIA Roles](https://www.w3.org/TR/wai-aria-1.1/#role_definitions)
 - [Definition of ARIA States and Properties](https://www.w3.org/TR/wai-aria-1.1/#state_prop_def)
+- [Part B: Support the production of accessible content](https://www.w3.org/TR/ATAG20/#part_b)
   
 # Setup Dev
 ## virtualenv
