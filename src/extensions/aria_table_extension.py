@@ -8,7 +8,7 @@ class TableRoleSetter(ElementVisitor):
 
     def visit_table(self, element, *args, **kwargs):
         element.set('role', 'table')
-        element.set('aria-rowcount', str(len(element)))
+        element.set('aria-rowcount', str(len(element) + 1))
     
 class TableRowIndexer(ElementVisitor):
 
