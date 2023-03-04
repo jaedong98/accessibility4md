@@ -9,7 +9,7 @@ import logging
 logging.basicConfig(level=logging.INFO)
 #print(markdown.markdown('foo --deleted-- bar', extensions=[MyExtension()]))
 
-SRC_FOLDER = Path("src")
+SRC_FOLDER = Path("src/samples")
 
 with open(SRC_FOLDER / 'sample.md', 'r') as f:
     logging.debug(markdown.markdown(f.read(), extensions=[AltCheckExtension()]))
