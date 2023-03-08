@@ -9,10 +9,10 @@ class AltMissingFinder(ElementVisitor):
 
     def visit_img(self, element, *args, **kwargs):
         if element.get('alt') is None:
-            logging.info("[WCAG 2.1 - 1.1.1 Non-text Content] Found an image with no alt text for %s" % element.get('src'))
+            logging.info("[WCAG 2.1 - 1.1.1 Non-text Content] Found a link with no alt text for %s" % element.get('src'))
             element.set('alt', 'No alt text provided')
         elif element.get('alt') == '':
-            logging.info("[WCAG 2.1 - 1.1.1 Non-text Content] Found an image with empty alt text for %s" % element.get('src'))
+            logging.info("[WCAG 2.1 - 1.1.1 Non-text Content] Found a link with empty alt text for %s" % element.get('src'))
             element.set('alt', 'No alt text provided')   
 
    
@@ -24,7 +24,7 @@ class AltNearbyVisitor(ElementVisitor):
             if child.tag == 'img':
                 if 'alt' in child.attrib:
                     if child.get('alt') in alt_texts:
-                        logging.info("[WCAG 2.1 - 1.1.1 Non-text Content] Found an image with duplicate alt text(%s) for %s" % (child.get('alt'), child.get('src')))
+                        logging.info("[WCAG 2.1 - 1.1.1 Non-text Content] Found a link with duplicate alt text(%s) for %s" % (child.get('alt'), child.get('src')))
                     else:
                         alt_texts.add(child.get('alt'))
 
