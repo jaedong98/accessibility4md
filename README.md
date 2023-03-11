@@ -1,21 +1,27 @@
 # Accessibility4md
 
+## Project Description
+Course work Final Project - [UW CSEP 590B](https://courses.cs.washington.edu/courses/csep590b/23wi/assignments/project.html)
+
+There are many tools available to check the accessibility of the HTML files. The markdown format is one of the common format that helps authors to focus on writing instead of formating. However, there are no tools available to check the accessibility of the markdown files during the publication workflow. This project aims to demonstrate that the authors can improve the accessibility during their publication workflow. 
+
+## Contents
 This repository contains a set of extensions for [Python-Markdown](https://github.com/Python-Markdown/markdown), focusing on the accessibility on the markdown file.
 
-This project aim to demonstrate that the authors can improve the accessibility before publishing documents. This projects uses the visitor pattern to visit and check the each nodes parsed by python-markdown library and provides the feedback in console. 
-
 # Prerequisite
+This project requires the python-markdown package to be installed.
 ```bash
 pip install markdown
 ```
 
 # Extension installation
+The extensions are located in the `src/extensions` folder. To install the extensions, run the following command.
 ```bash
 cd src/extensions
 python setup install
 ```
 
-# Examples
+# Current implemented extensions
 ## Check if alternative text is missing or duplicate.
 ```python
 import markdown
@@ -34,7 +40,7 @@ INFO:root:[WCAG 2.1 - 1.1.1 Non-text Content] Found an image with empty alt text
 INFO:root:[WCAG 2.1 - 1.1.1 Non-text Content] Found an image with duplicate alt text(same-alt-text-nearby) for badcontrast3.png
 ```
 
-## Chain of extensions to produce HTML with attributes
+## Chain of extensions to produce HTML with `accessibility` attributes
 The `AriaTableExtension` converts the markdown table into HTML format, and `AriaTableIndexExtension` adds the attributes for accessibility.
 ```python
 import markdown
